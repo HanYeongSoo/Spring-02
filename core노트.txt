@@ -1,0 +1,8 @@
+2022-02-16
+
+	1. 프로젝트 생성
+		.- start.spring.io 가서 생성
+		.- gradle.build로 프로잭트 불러온 후 file -> settings -> gradle검색 후 실행환경 인텔리제이로 변경
+
+	2. 비즈니스 요구사항과 설계
+		.- 
