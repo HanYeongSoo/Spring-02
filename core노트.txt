@@ -51,7 +51,8 @@
 		.- 이것이 DI(Dependency Injection) 의존관계 주입, 의존성 주입이라고 한다.
 
 	
-	
+	2. AppConfig 리팩토링
+		.- 
 
 
 
