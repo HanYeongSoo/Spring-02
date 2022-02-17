@@ -65,6 +65,8 @@
 
 	
 	4. IoC, DI, 컨테이너
+
+	** 여기서부터 Spring 그 자체를 알아보자 ** 
 	
 	5. 스프링으로 AppConfig 바꿔보기
 		.- ApplicationContext 를 스프링 컨테이너라고 함
@@ -73,9 +75,14 @@
 		.- 스프링빈은 applicationContext.getBean()메소드로 찾을 수 있음 getBean()에서 (@Bean으로 등록한 메소드랑 이름 같게, 그 실제 메소드.class)로 호출
 		.- 코드가 더 복잡하고 뭔 첨보는것들을 쓰는데...ㅠㅠ
 
+	6. 컨테이너에 등록된 모든 빈 조회하기
+		.- ac.getBeanDefinitionNames() : 스프링에 등록된 모든 빈 이름을 조회한다.
+		.- ac.getBean() : 빈 이름으로 객체(인스턴스)를 조회한다.
+
+		.- Role ROLE_APPLICATION: 직접 등록한 애플리케이션 빈
+             	.- Role ROLE_INFRASTRUCTURE: 스프링 내부에서 사용하는 빈
+
 	
-
-
 
 
 
