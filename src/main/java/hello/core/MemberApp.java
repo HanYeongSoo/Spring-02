@@ -8,7 +8,10 @@ import hello.core.member.MemberServiceImpl;
 public class MemberApp {
 
     public static void main(String[] args) {    // psvm으로 한번에 main 메소드 생성 가능
-        MemberService memberService = new MemberServiceImpl();
+
+        AppConfig appConfig = new AppConfig();
+        MemberService memberService = appConfig.memberService();
+
         Member member = new Member(1L, "memberA", Grade.VIP);   // L이 붙은건 Member객체에 id가 Long형태라
         memberService.join(member);
 
