@@ -86,6 +86,10 @@
 2022-02-18
 
 	1. 스프링 빈 조회 - 기본
+		.- 가장 기본적인 조회 방법 -> ac.getBean(빈이름, 타입) or ac.getBean(타입)
+		.- 조회 대상 스프링 빈이 없으면 NoSuchBeanDefinitionException 예외 발생
+
+	2. 스프링 빈 조회 - 동일한 타입이 둘 이상
 		.- 
 
 
