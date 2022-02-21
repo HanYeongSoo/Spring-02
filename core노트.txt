@@ -98,7 +98,18 @@
 		
 	** 위에 1,2,3번은 실제로 많이 쓰진 않을것 이지만 개념은 알고 있는게 좋음**
 
-	4. 
+2022-02-21
+
+	1. ApplicationContext 와 BeanFactory
+		.- BeanFactory가 상위, 이걸 상속 받고 사용하는것이 ApplicationContext
+		.- ApplicationContext를 주로 사용
+		.- 여러 부가적인 기능이 존재
+
+	2. 다양한 설정 형식 지원 - 자바 코드, XML
+		.- xml파일 설정 코드로 확인 (처음에 @Bean으로 만든 appConfig.class와 거의 거의 코드가 유사함)
+
+	3. 스프링 빈 설정 메타 정보 - BeanDefinition
+		.- 
 
 
 
