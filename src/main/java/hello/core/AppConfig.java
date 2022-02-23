@@ -15,18 +15,33 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class AppConfig {
 
+    // @Bean memberService -> new MemoryMemberRepository()
+    // @Bean OrderService -> new MemoryMemberRepository()
+    // 모지? 싱글톤이 깨지는건가?? 라는 의문이 생길 수 있음
+
+    // 그럼 call AppConfig.memberRepository가 3번은 나오겠지? 했는데 출력결과는
+    /*
+        call AppConfig.memberService
+        call AppConfig.orderService
+        call AppConfig.orderService
+        가 한번 씩 출력되었다...!
+     */
+
     @Bean
     public MemberService memberService() {
+        System.out.println("call AppConfig.memberService");
         return new MemberServiceImpl(memberRepository());
     }
 
     @Bean
     public OrderService orderService() {
+        System.out.println("call AppConfig.orderService");
         return new OrderServiceImpl(memberRepository(), discountPolicy());
     }
 
     @Bean
     public MemberRepository memberRepository() {
+        System.out.println("call AppConfig.memberRepository");
         return new MemoryMemberRepository();    // 나중에 뭔가 변경이 있으면 이쪽만 바꾸면 끝!
     }
 
