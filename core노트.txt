@@ -142,7 +142,11 @@
 		.- memberRepository가 3번 호출되는게 맞는거 같은데 정작 1번만 호출되었다..!?
 	
 	6. @Configuration과 바이트코드 조작의 마법!
-		.- 
+		.- bean을 출력했는데 bean.getClass() = class hello.core.AppConfig$$EnhancerBySpringCGLIB$$7afd499e 이러케 나왔는디
+		.- $$EnhancerBySpringCGLIB$$7afd499e 이 부분이 뭐지?
+		.- 스프링이 CGLIB라는 바이트코드 조작 라이브러리를 사용해서 AppConfig 클래스를 상속받은 임의의 다른 클래스를 만들고
+		 	그 다른 클래스를 스프링 빈으로 등록한 것!
+		.- 즉 스프링 조작과 관련된 부분은 @Configuration을 박고 시작하자
 
 
 
