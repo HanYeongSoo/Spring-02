@@ -172,7 +172,18 @@
 	3. 필터 (그냥 @Conponent 정해진거 쓰는걸 권장)
 		.- @Target(ElementType.TYPE), @Retention(RetentionPolicy.RUNTIME) ,@Documented
 		.- includeFilters : 컴포넌트 스캔 대상을 추가로 지정한다 // excludeFilters : 컴포넌트 스캔에서 제외할 대상을 지정한다
-		.- 
+		
+	4. 중복 등록과 충돌
+		.- 자동 빈 등록 vs 자동 빈 등록 -> ConflictingBeanDefinitionException예외 발생
+		
+		.- 수동 빈 등록 vs 자동 빈 등록 -> 수동 빈 등록이 우선
+		.- 최근 스프링 부트에서는 수동 빈 등록과 자동 빈 등록이 충돌나면 오류가 발생하도록 기본 값을 바꿈
+
+** 컴포넌트 스캔 끝!**
+
+** 의존관계 자동 주입 **
+
+	1. 
 
 
 
