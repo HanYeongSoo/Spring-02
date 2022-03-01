@@ -223,8 +223,21 @@
 		-. 롬복 라이브러리가 제공하는 @RequiredArgsConstructor 기능을 사용하면 final이 붙은 필드를 모아서
 			생성자를 자동으로 만들어준다. (다음 코드에는 보이지 않지만 실제 호출 가능하다.)
 
-	5. 
+2022-03-01
+	5. 조회 빈이 2개 이상 -문제
+		.- 
 
+	6. @Autowired필드 명, @Quilifier, @Primary
+		.- 조회 대상 빈이 2개 이상일 경우 해결 방법 세 가지
+
+		.- @Autowired --> 타입 매칭 , 타입 매칭의 결과가 2개 이상일 때 필드 명, 파라미터 명으로 빈 이름 매칭
+		.- @Quilifier --> @Qualifier끼리 매칭,  빈 이름 매칭, NoSuchBeanDefinitionException 예외 발생
+		.- @Primary --> 우선순위를 정하는 것 근데 @Primary보단 @Quilifier가 우선순위가 높게 잡혀서 처리됨
+
+		.- 자주쓰는건 @Primary로 편하게 설정하고, 자주 안쓰는건 @Quilifier를 사용하여 명시적으로 더 잘 보이도록 처리하면 깔끔한 코드
+	
+	7. 
+	
 
 
 
