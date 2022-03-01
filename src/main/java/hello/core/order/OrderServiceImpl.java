@@ -1,5 +1,7 @@
 package hello.core.order;
 
+
+import hello.core.annotation.MainDiscountPolicy;
 import hello.core.discount.DiscountPolicy;
 import hello.core.member.Member;
 import hello.core.member.MemberRepository;
@@ -17,7 +19,7 @@ public class OrderServiceImpl implements OrderService{
     private final DiscountPolicy discountPolicy;  // DIP를 지켰는데 실행이 안된다...(널포인터익셉션이 뜸)
 
     @Autowired
-    public OrderServiceImpl(MemberRepository memberRepository, DiscountPolicy discountPolicy) {
+    public OrderServiceImpl(MemberRepository memberRepository, @MainDiscountPolicy DiscountPolicy discountPolicy) {
         this.memberRepository = memberRepository;
         this.discountPolicy = discountPolicy;
     }
