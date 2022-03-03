@@ -264,7 +264,13 @@
 			.- 소멸전 콜백 : 빈이 소멸되기 직전에 호출
 
 	2. 인터페이스 InitializingBean, DisposableBean
-		.- 
+		.- InitializingBean(초기화), DisposableBean(소멸) 인터페이스 단점
+			1_ 스프링 전용 인터페이스임
+			2_ 이름 변경이 x
+			3_ 외부 라이브러리에 적용할 수 없다
+
+	3. 빈 등록 초기화, 소멸 메소드
+		.-  
 
 
 
