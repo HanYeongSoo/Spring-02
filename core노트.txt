@@ -291,8 +291,16 @@
 		.- 관리를 안하기 때문에 종료메서드가 호출될 수가 없음!!
 		.- 그래서 프로토타입 빈에서는 @PreDestroy가 실행되지 않음
 
-	3. 
-		
+2022-03-04
+
+	3. 프로토타입 스코프 - 싱글톤 빈과 함께 사용시 문제점
+
+	4. 프로토타입 스코프 - 싱글톤 빈과 함께 사용시 Provider로 문제 해결
+		.- ObjectFactory, ObjectProvider, JSR-330 Provide를 사용 
+		.- ObjectFactory: 기능이 단순, 별도의 라이브러리 필요 없음, 스프링에 의존
+		.- ObjectProvider: ObjectFactory 상속, 옵션, 스트림 처리등 편의 기능이 많고, 별도의 라이브러리 필요없음, 스프링에 의존
+		.- JSR-330 provide를 사용하기 위해선 javax.inject:javax.inject:1 라이브러리를 gradle에 추가해야 함
+
 
 
 
